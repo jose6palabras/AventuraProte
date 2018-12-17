@@ -2,6 +2,8 @@
 <resources>
     <dimen name="facebookpadding">3dp</dimen>
     <dimen name="googlepadding">5dp</dimen>
+
+
     <!-- cardview dimens. -->
     <dimen name="linearlayoutpadding">8dp</dimen>
     <dimen name="cardview_picture">240dp</dimen>
@@ -9,4 +11,14 @@
     <dimen name="cardview_name_size">20sp</dimen>
     <dimen name="cardview_local_size">16sp</dimen>
     <dimen name="cardview_hometitle">25sp</dimen>
+
+    <!-- home dimens. -->
+    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="appbarimageheight">30dp</dimen>
+    <dimen name="appbarimagewidth">250dp</dimen>
+    <dimen name="paddinglefthome">20dp</dimen>
+    <dimen name="loginbuttonwidth">200dp</dimen>
+    <dimen name="loginbuttonheight">50dp</dimen>
 </resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="facebookpadding">3dp</dimen>
+    <dimen name="googlepadding">5dp</dimen>
+    <!-- cardview dimens. -->
+    <dimen name="linearlayoutpadding">8dp</dimen>
+    <dimen name="cardview_picture">240dp</dimen>
+    <dimen name="cardview_width">360dp</dimen>
+    <dimen name="cardview_name_size">20sp</dimen>
+    <dimen name="cardview_local_size">16sp</dimen>
+    <dimen name="cardview_hometitle">25sp</dimen>
+</resources>

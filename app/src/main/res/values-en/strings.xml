@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Aventura</string>
+    <string name="invitation">Visit Cocorná</string>
+    <string name="una">a</string>
+    <string name="facebook_google">Login with</string>
+    <string name="invitated">Guest login</string>
+    <string name="todo">Todo</string>
+</resources>

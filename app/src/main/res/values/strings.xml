@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Aventura</string>
+    <string name="invitation">Visita Cocorná</string>
+    <string name="una">una</string>
+    <string name="facebook_google">Ingresa con</string>
+    <string name="invitated">Ingresa como invitado</string>
+    <string name="todo">Todo</string>
+</resources>

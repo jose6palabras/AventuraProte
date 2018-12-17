@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <group >
+        <item
+            android:id="@+id/home_item_cocorna"
+            android:title="@string/Cocorna_var"/>
+        <item
+            android:id="@+id/home_item_places"
+            android:title="@string/places" />
+        <item
+            android:id="@+id/nav_todo"
+            android:title="@string/to_do" />
+        <item
+            android:id="@+id/nav_restaurants"
+            android:title="@string/restaurants" />
+        <item
+            android:id="@+id/home_item_hotel"
+            android:title="@string/hotels"/>
+        <item
+            android:id="@+id/home_item_sunday"
+            android:title="@string/sundays"/>
+        <item
+            android:id="@+id/home_item_nightlife"
+            android:title="@string/nightlife"/>
+        <item
+            android:id="@+id/home_item_adventure"
+            android:title="@string/adventure"/>
+        <item
+            android:id="@+id/home_item_community"
+            android:title="@string/community"/>
+        <item
+            android:id="@+id/home_item_calendar"
+            android:title="@string/Calendar"/>
+    </group>
+</menu>

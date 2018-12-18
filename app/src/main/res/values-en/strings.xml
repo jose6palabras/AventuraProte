@@ -7,18 +7,20 @@
     <string name="invitated">Guest login</string>
     <string name="todo">Todo</string>
     <string name="Cocornatown">Cocorná, Antioquia</string>
-    <string name="aventura">Aventura</string>
+    <string name="aventura">Adventure</string>
 
     <!--Menu strings -->
-    <string name="Cocorna_var">Conoce Cocorná</string>
-    <string name="places">Sitios de Interés</string>
-    <string name="to_do">¿Qué quieres hacer?</string>
-    <string name="restaurants">Restaurantes</string>
-    <string name="sundays">Días de sol</string>
-    <string name="nightlife">Vida Nocturna</string>
-    <string name="adventure">Aventura</string>
-    <string name="community">Comunidad</string>
-    <string name="Calendar">Fechas importantes</string>
+    <string name="Cocorna_var">A Town called Cocorná</string>
+    <string name="places">A Wonderful Town</string>
+    <string name="to_do">Activities</string>
+    <string name="restaurants">Restaurants</string>
+    <string name="sundays">Sundays</string>
+    <string name="nightlife">Night life</string>
+    <string name="adventure">Adventure</string>
+    <string name="community">Community</string>
+    <string name="Calendar">Dates</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="Sites">A Wonderful Town</string>
+    <string name="food">Eating out</string>
 </resources>

@@ -8,10 +8,83 @@
     tools:context="com.grupodetec.aventuraprote.View.Home.HomeActivity"
     tools:showIn="@layout/activity_home">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
-        android:text="@string/large_text" />
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/home_scroll_sites_title"
+            android:text="@string/Sites"
+            android:gravity="center"
+            android:layout_margin="@dimen/linearlayoutpadding"
+            android:fontFamily="sans-serif"
+            android:textSize="@dimen/cardview_hometitle"/>
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/recyclerview_sites"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/home_scroll_food_title"
+            android:text="@string/food"
+            android:gravity="center"
+            android:layout_margin="@dimen/linearlayoutpadding"
+            android:fontFamily="sans-serif"
+            android:textSize="@dimen/cardview_hometitle"/>
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/recyclerview_food"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/home_scroll_hotels_title"
+            android:text="@string/hotels"
+            android:gravity="center"
+            android:layout_margin="@dimen/linearlayoutpadding"
+            android:fontFamily="sans-serif"
+            android:textSize="@dimen/cardview_hometitle"/>
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/recyclerview_hotels"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/home_scroll_adventure_title"
+            android:text="@string/adventure"
+            android:gravity="center"
+            android:layout_margin="@dimen/linearlayoutpadding"
+            android:fontFamily="sans-serif"
+            android:textSize="@dimen/cardview_hometitle"/>
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/recyclerview_adventure"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/home_scroll_night_title"
+            android:text="@string/nightlife"
+            android:gravity="center"
+            android:layout_margin="@dimen/linearlayoutpadding"
+            android:fontFamily="sans-serif"
+            android:textSize="@dimen/cardview_hometitle"/>
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/recyclerview_night"
+            />
+
+
+    </LinearLayout>
 
 </android.support.v4.widget.NestedScrollView>

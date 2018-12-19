@@ -16,17 +16,21 @@ import java.util.List;
  * Created by android on 17/12/18.
  */
 
-public class RecyclerViewAdapter extends RecyclerView.Adapter <RecyclerViewAdapter.cardViewViewHolder> {
-    List <CardViewModel> cardViewModels;
+public class RecyclerViewAdapter extends RecyclerView.Adapter <RecyclerViewAdapter.cardViewViewHolder> implements View.OnClickListener {
+    private List <CardViewModel> cardViewModels;
+    private int resource;
+    private View.OnClickListener listener;
 
-    public RecyclerViewAdapter(List<CardViewModel> cardViewModels) {
+    public RecyclerViewAdapter(List<CardViewModel> cardViewModels, int resource) {
         this.cardViewModels = cardViewModels;
+        this.resource = resource;
     }
 
     @Override
     public cardViewViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.cardview_model, viewGroup, false);
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(resource, viewGroup, false);
         cardViewViewHolder cardViewViewHolderobj = new cardViewViewHolder(view);
+        view.setOnClickListener(this);
         return cardViewViewHolderobj;
     }
 
@@ -44,6 +48,17 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter <RecyclerViewAdapt
     @Override
     public void onAttachedToRecyclerView(RecyclerView recyclerView){
         super.onAttachedToRecyclerView(recyclerView);
+    }
+
+
+    public void setOnClickListener(View.OnClickListener listener){this.listener = listener;}
+
+    @Override
+    public void onClick(View v) {
+        if (listener!=null){
+            listener.onClick(v);
+        }
+
     }
 
     public static class cardViewViewHolder extends RecyclerView.ViewHolder{

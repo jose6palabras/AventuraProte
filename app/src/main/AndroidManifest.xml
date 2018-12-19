@@ -19,7 +19,9 @@
         <activity
             android:name=".View.Home.HomeActivity"
             android:label="@string/title_activity_home"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".View.Sites.SitesActivity" />
+        <activity android:name=".View.Sites.ContainerActivity"></activity>
     </application>
 
 </manifest>

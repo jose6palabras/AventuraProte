@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/modelCardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="@dimen/linearlayoutpadding">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp">
+        <ImageView
+            android:id="@+id/cardviewpicture"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_picture"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="bottom"
+            android:background="@color/transparent_alpha"
+            android:paddingLeft="@dimen/linearlayoutpadding"
+            android:paddingStart="@dimen/linearlayoutpadding">
+            <TextView
+                android:id="@+id/cardviewname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/cardview_name_size"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/cardviewlocal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/cardview_local_size"/>
+        </LinearLayout>
+    </FrameLayout>
+</android.support.v7.widget.CardView>

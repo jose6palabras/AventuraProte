@@ -9,10 +9,10 @@
             android:id="@+id/home_item_places"
             android:title="@string/places" />
         <item
-            android:id="@+id/nav_todo"
+            android:id="@+id/home_item_do"
             android:title="@string/to_do" />
         <item
-            android:id="@+id/nav_restaurants"
+            android:id="@+id/home_item_restaurants"
             android:title="@string/restaurants" />
         <item
             android:id="@+id/home_item_hotel"

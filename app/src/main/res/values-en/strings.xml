@@ -23,4 +23,6 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="Sites">A Wonderful Town</string>
     <string name="food">Eating out</string>
+    <string name="sites">¡Conoce Cocorná!</string>
+    <string name="descripcion">Cocorná es un municipio de Colombia, localizado en la subregión Oriente del departamento de Antioquia. Limita por el Norte con los municipios de El Santuario y Granada, por el este con los municipios de Granada, San Luis y San Francisco, por el sur con los municipios de Sonsón y El Carmen de Viboral y por el oeste con el municipio de El Carmen de Viboral. Su cabecera dista 80 kilómetros de la ciudad de Medellín, capital del departamento de Antioquia. El municipio posee una extensión de 211 kilómetros cuadrados.</string>
 </resources>

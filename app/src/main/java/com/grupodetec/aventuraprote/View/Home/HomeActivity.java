@@ -1,8 +1,10 @@
 package com.grupodetec.aventuraprote.View.Home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -11,10 +13,13 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
+import com.grupodetec.aventuraprote.Pojo.DataSource;
 import com.grupodetec.aventuraprote.R;
 import com.grupodetec.aventuraprote.View.CardViewModel;
 import com.grupodetec.aventuraprote.View.RecyclerViewAdapter;
+import com.grupodetec.aventuraprote.View.Sites.SitesActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,11 +38,14 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle(null);
+
         //left menu for drawer layout
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawerlayoutmenuhome);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
+
+        //Navigation View implementation
         NavigationView navigationView = (NavigationView) findViewById(R.id.home_navigationview);
         navigationView.setNavigationItemSelectedListener(this);
 
@@ -79,25 +87,34 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         nightLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
         nightRecyclerView.setLayoutManager(nightLayoutManager);
 
+        DataSource dataSource = new DataSource();
 
-        initializeData();
 
         /*set Adapter*/
-        RecyclerViewAdapter sitesAdapter = new RecyclerViewAdapter(sitescardViewModels);
+        RecyclerViewAdapter sitesAdapter = new RecyclerViewAdapter(dataSource.sitesData(), R.layout.cardview_model);
         sitesRecyclerView.setAdapter(sitesAdapter);
 
-        RecyclerViewAdapter foodAdapter = new RecyclerViewAdapter(foodcardViewModels);
+        RecyclerViewAdapter foodAdapter = new RecyclerViewAdapter(dataSource.foodData(), R.layout.cardview_model);
         foodRecyclerView.setAdapter(foodAdapter);
 
-        RecyclerViewAdapter hotelsAdapter = new RecyclerViewAdapter(hotelscardViewModels);
+        RecyclerViewAdapter hotelsAdapter = new RecyclerViewAdapter(dataSource.hotelData(), R.layout.cardview_model);
         hotelsRecyclerView.setAdapter(hotelsAdapter);
 
-        RecyclerViewAdapter adventureAdapter = new RecyclerViewAdapter(adventurViewModels);
+        RecyclerViewAdapter adventureAdapter = new RecyclerViewAdapter(dataSource.adventureData(), R.layout.cardview_model);
         adventureRecyclerView.setAdapter(adventureAdapter);
 
-        RecyclerViewAdapter nightAdapter = new RecyclerViewAdapter(nightcardViewModels);
+        RecyclerViewAdapter nightAdapter = new RecyclerViewAdapter(dataSource.nightData(), R.layout.cardview_model);
         nightRecyclerView.setAdapter(nightAdapter);
 
+    }
+    @Override
+    public void onBackPressed() {
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawerlayoutmenuhome);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -120,37 +137,37 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     }
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        return false;
-    }
+        // Handle navigation view item clicks here.
+        int id = item.getItemId();
 
-    private void initializeData() {
-        sitescardViewModels = new ArrayList<>();
-        sitescardViewModels.add(new CardViewModel(R.drawable.site1, "Cabellera venus", "Media Cuesta"));
-        sitescardViewModels.add(new CardViewModel(R.drawable.site3, "Microcuenca", "Potreros"));
-        sitescardViewModels.add(new CardViewModel(R.drawable.site4, "Mirador Cocorná", "Chorrera"));
+        if (id == R.id.home_item_cocorna) {
+            // Handle the camera action
+        } else if (id == R.id.home_item_places) {
+            Intent intent = new Intent(getApplicationContext(), SitesActivity.class);
+            startActivity(intent);
 
-        foodcardViewModels = new ArrayList<>();
-        foodcardViewModels.add(new CardViewModel(R.drawable.food1, "Asado al Carbón", "Restaurante 1"));
-        foodcardViewModels.add(new CardViewModel(R.drawable.food2, "Hamburguesa de Pollo", "Restaurante 2"));
-        foodcardViewModels.add(new CardViewModel(R.drawable.food3, "Pizza Artesanal", "Restaurante 3"));
-        foodcardViewModels.add(new CardViewModel(R.drawable.food4, "Punta de Anca", "Restaurante 4"));
+        } else if (id == R.id.home_item_do) {
+            Toast.makeText(this, "Dímelo papi!", Toast.LENGTH_SHORT).show();
 
-        hotelscardViewModels = new ArrayList<>();
-        hotelscardViewModels.add(new CardViewModel(R.drawable.hotel1, "Hotel 1", "Parque principal"));
-        hotelscardViewModels.add(new CardViewModel(R.drawable.hotel2, "Hotel 2", "Parque principal"));
-        hotelscardViewModels.add(new CardViewModel(R.drawable.hotel3, "Hotel 3", "Cra 21 34-32"));
-        hotelscardViewModels.add(new CardViewModel(R.drawable.hotel4, "Hotel 4", "Calle 19 23-22"));
+        } else if (id == R.id.home_item_restaurants) {
 
-        adventurViewModels = new ArrayList<>();
-        adventurViewModels.add(new CardViewModel(R.drawable.adventure1, "Downhill", "Parque principal"));
-        adventurViewModels.add(new CardViewModel(R.drawable.adventure2, "Parapente", "Parque principal"));
-        adventurViewModels.add(new CardViewModel(R.drawable.adventure3, "Rafting", "Cra 21 34-32"));
-        adventurViewModels.add(new CardViewModel(R.drawable.adventure4, "Rappel", "Calle 19 23-22"));
+        } else if (id == R.id.home_item_hotel) {
 
-        nightcardViewModels = new ArrayList<>();
-        nightcardViewModels.add(new CardViewModel(R.drawable.night1, "Cocktails", "Parque principal"));
-        nightcardViewModels.add(new CardViewModel(R.drawable.night2, "Disco 2", "Parque principal"));
-        nightcardViewModels.add(new CardViewModel(R.drawable.night3, "Disco 3", "Cra 21 34-32"));
-        nightcardViewModels.add(new CardViewModel(R.drawable.night4, "Disco 4", "Calle 19 23-22"));
+        } else if (id == R.id.home_item_sunday) {
+
+        }else if (id == R.id.home_item_nightlife) {
+
+        }else if (id == R.id.home_item_adventure) {
+            Toast.makeText(this, "Dímelo papi!", Toast.LENGTH_SHORT).show();
+
+        }else if (id == R.id.home_item_community) {
+
+        }else if (id == R.id.home_item_calendar) {
+
+        }
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawerlayoutmenuhome);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
     }
 }

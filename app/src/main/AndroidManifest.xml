@@ -21,7 +21,15 @@
             android:label="@string/title_activity_home"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".View.Sites.SitesActivity" />
-        <activity android:name=".View.Sites.ContainerActivity"></activity>
+        <activity android:name=".View.Sites.ContainerActivity" />
+        <activity android:name=".View.Food.FoodActivity" />
+        <activity android:name=".View.Food.ContainerActivity" />
+        <activity android:name=".View.Adventure.AdventureActivity" />
+        <activity android:name=".View.Adventure.ContainerActivity" />
+        <activity android:name=".View.Hotel.HotelActivity" />
+        <activity android:name=".View.Hotel.ContainerActivity" />
+        <activity android:name=".View.Night.NightActivity" />
+        <activity android:name=".View.Night.ContainerActivity"></activity>
     </application>
 
 </manifest>

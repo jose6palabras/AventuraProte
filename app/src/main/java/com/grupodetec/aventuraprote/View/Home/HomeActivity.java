@@ -17,7 +17,11 @@ import android.widget.Toast;
 
 import com.grupodetec.aventuraprote.Pojo.DataSource;
 import com.grupodetec.aventuraprote.R;
+import com.grupodetec.aventuraprote.View.Adventure.AdventureActivity;
 import com.grupodetec.aventuraprote.View.CardViewModel;
+import com.grupodetec.aventuraprote.View.Food.FoodActivity;
+import com.grupodetec.aventuraprote.View.Hotel.HotelActivity;
+import com.grupodetec.aventuraprote.View.Night.NightActivity;
 import com.grupodetec.aventuraprote.View.RecyclerViewAdapter;
 import com.grupodetec.aventuraprote.View.Sites.SitesActivity;
 
@@ -142,6 +146,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
         if (id == R.id.home_item_cocorna) {
             // Handle the camera action
+            Toast.makeText(this, "Dímelo papi!", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.home_item_places) {
             Intent intent = new Intent(getApplicationContext(), SitesActivity.class);
             startActivity(intent);
@@ -150,19 +155,28 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             Toast.makeText(this, "Dímelo papi!", Toast.LENGTH_SHORT).show();
 
         } else if (id == R.id.home_item_restaurants) {
+            Intent intent = new Intent(getApplicationContext(), FoodActivity.class);
+            startActivity(intent);
 
         } else if (id == R.id.home_item_hotel) {
+            Intent intent = new Intent(getApplicationContext(), HotelActivity.class);
+            startActivity(intent);
 
         } else if (id == R.id.home_item_sunday) {
 
         }else if (id == R.id.home_item_nightlife) {
+            Intent intent = new Intent(getApplicationContext(), NightActivity.class);
+            startActivity(intent);
 
         }else if (id == R.id.home_item_adventure) {
-            Toast.makeText(this, "Dímelo papi!", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(getApplicationContext(), AdventureActivity.class);
+            startActivity(intent);
 
         }else if (id == R.id.home_item_community) {
+            Toast.makeText(this, "Dímelo papi!", Toast.LENGTH_SHORT).show();
 
         }else if (id == R.id.home_item_calendar) {
+            Toast.makeText(this, "Dímelo papi!", Toast.LENGTH_SHORT).show();
 
         }
 

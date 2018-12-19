@@ -19,7 +19,6 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
     }
     public void guestLogin (View view){
-        Toast.makeText(this, "Dímelo papi!", Toast.LENGTH_SHORT).show();
         Intent intentguest = new Intent(this, HomeActivity.class);
         startActivity(intentguest);
 

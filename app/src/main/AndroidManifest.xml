@@ -29,7 +29,8 @@
         <activity android:name=".View.Hotel.HotelActivity" />
         <activity android:name=".View.Hotel.ContainerActivity" />
         <activity android:name=".View.Night.NightActivity" />
-        <activity android:name=".View.Night.ContainerActivity"></activity>
+        <activity android:name=".View.Night.ContainerActivity" />
+        <activity android:name=".View.DulceAventura.DulceAventuraActivity"></activity>
     </application>
 
 </manifest>

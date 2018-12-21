@@ -36,4 +36,22 @@
     <string name="best_food">Conoce nuestra mejor comida</string>
     <string name="dulceaventura">Una Dulce Aventura</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="corporacion">Corporación</string>
+    <string name="wannado">¿Qué quieres hacer?</string>
+    <string name="downhill">Downhill</string>
+    <string name="ecorutas">EcoRutas</string>
+    <string name="parapente">Parapente</string>
+    <string name="rappel">Rappel</string>
+    <string name="rafting">Rafting</string>
+    <string name="kayac">Kayac</string>
+    <string name="enduro">Enduro MTB</string>
+    <string name="hotel">Hotel</string>
+    <string name="mtb">MTB</string>
+    <string name="fincahotel">Finca Hotel</string>
+    <string name="pezca">Pezca</string>
+    <string name="choosehotel">Elige tu hotel</string>
+    <string name="checkout">Elige el mejor para ti</string>
+
 </resources>

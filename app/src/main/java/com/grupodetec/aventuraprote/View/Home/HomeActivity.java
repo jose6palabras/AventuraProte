@@ -19,6 +19,7 @@ import com.grupodetec.aventuraprote.Pojo.DataSource;
 import com.grupodetec.aventuraprote.R;
 import com.grupodetec.aventuraprote.View.Adventure.AdventureActivity;
 import com.grupodetec.aventuraprote.View.CardViewModel;
+import com.grupodetec.aventuraprote.View.DulceAventura.DulceAventuraActivity;
 import com.grupodetec.aventuraprote.View.Food.FoodActivity;
 import com.grupodetec.aventuraprote.View.Hotel.HotelActivity;
 import com.grupodetec.aventuraprote.View.Night.NightActivity;
@@ -152,7 +153,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             startActivity(intent);
 
         } else if (id == R.id.home_item_do) {
-            Toast.makeText(this, "Dímelo papi!", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(getApplicationContext(), DulceAventuraActivity.class);
+            startActivity(intent);
 
         } else if (id == R.id.home_item_restaurants) {
             Intent intent = new Intent(getApplicationContext(), FoodActivity.class);

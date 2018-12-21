@@ -32,4 +32,16 @@
         El municipio posee una extensión de 211 kilómetros cuadrados.</string>
     <string name="best_food">The best food</string>
     <string name="dulceaventura">Dulce Aventura</string>
+    <string name="ecorutas">EcoRutas</string>
+    <string name="parapente">Parapente</string>
+    <string name="rappel">Rappel</string>
+    <string name="rafting">Rafting</string>
+    <string name="kayac">Kayac</string>
+    <string name="enduro">Enduro MTB</string>
+    <string name="hotel">Hotel</string>
+    <string name="mtb">MTB</string>
+    <string name="fincahotel">Finca Hotel</string>
+    <string name="pezca">Pezca</string>
+    <string name="choosehotel">Elige tu hotel</string>
+    <string name="checkout">Elige el mejor para ti</string>
 </resources>

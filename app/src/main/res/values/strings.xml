@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Aventura</string>
     <string name="invitation">Visita Cocorná</string>
@@ -6,7 +7,7 @@
     <string name="invitated">Ingresa como invitado</string>
     <string name="todo">Todo</string>
     <string name="title_activity_home">HomeActivity</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Perfiles</string>
     <string name="Cocornatown">Cocorná, Antioquia</string>
     <string name="aventura">Aventura</string>
     <string name="Cocornadulceaventura">Cocorná Dulce Aventura</string>
@@ -19,9 +20,8 @@
     <string name="sundays">Días de sol</string>
     <string name="nightlife">Vida Nocturna</string>
     <string name="adventure">Aventura</string>
-    <string name="community">Comunidad</string>
+    <string name="community">CocornáGram</string>
     <string name="Calendar">Fechas importantes</string>
-
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="Sites">Cocorná una Maravilla</string>
@@ -35,9 +35,7 @@
         El municipio posee una extensión de 211 kilómetros cuadrados.</string>
     <string name="best_food">Conoce nuestra mejor comida</string>
     <string name="dulceaventura">Una Dulce Aventura</string>
-
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="corporacion">Corporación</string>
     <string name="wannado">¿Qué quieres hacer?</string>
     <string name="downhill">Downhill</string>
@@ -53,5 +51,9 @@
     <string name="pezca">Pezca</string>
     <string name="choosehotel">Elige tu hotel</string>
     <string name="checkout">Elige el mejor para ti</string>
+    <string name="melcocho">Rio Melcocho</string>
+    <string name="colombia">Colombia</string>
+    <string name="how_arrive">¿Cómo llegar?</string>
+    <string name="Cocornaflorece">Alcaldía Cocorná Florece</string>
 
 </resources>

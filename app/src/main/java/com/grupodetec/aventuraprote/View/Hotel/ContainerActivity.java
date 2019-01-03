@@ -1,7 +1,9 @@
 package com.grupodetec.aventuraprote.View.Hotel;
 
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -13,6 +15,11 @@ public class ContainerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_container_hotel);
+        //set toolbar conf
+        Toolbar toolbar = (Toolbar) findViewById(R.id.hotel_c_toolbar);
+        setSupportActionBar(toolbar);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
         getIncomingIntent();
     }
     private void getIncomingIntent() {
@@ -32,5 +39,8 @@ public class ContainerActivity extends AppCompatActivity {
 
         TextView textViewlocal = findViewById(R.id.container_local);
         textViewlocal.setText(local);
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle(name);
     }
 }

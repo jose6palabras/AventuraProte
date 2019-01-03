@@ -13,12 +13,13 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
-
 import com.grupodetec.aventuraprote.Pojo.DataSource;
 import com.grupodetec.aventuraprote.R;
 import com.grupodetec.aventuraprote.View.Adventure.AdventureActivity;
-import com.grupodetec.aventuraprote.View.CardViewModel;
+import com.grupodetec.aventuraprote.View.Cocorna.CocornaActivity;
+import com.grupodetec.aventuraprote.View.CocornaGram.CocornagramActivity;
 import com.grupodetec.aventuraprote.View.DulceAventura.DulceAventuraActivity;
 import com.grupodetec.aventuraprote.View.Food.FoodActivity;
 import com.grupodetec.aventuraprote.View.Hotel.HotelActivity;
@@ -30,11 +31,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
-    List<CardViewModel> sitescardViewModels;
-    List<CardViewModel> foodcardViewModels;
-    List<CardViewModel> hotelscardViewModels;
-    List<CardViewModel> adventurViewModels;
-    List<CardViewModel> nightcardViewModels;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -112,6 +108,10 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         nightRecyclerView.setAdapter(nightAdapter);
 
     }
+    public void cocornalink (View view){
+        Intent intent = new Intent(this, CocornaActivity.class);
+        startActivity(intent);
+    }
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawerlayoutmenuhome);
@@ -147,7 +147,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
         if (id == R.id.home_item_cocorna) {
             // Handle the camera action
-            Toast.makeText(this, "Dímelo papi!", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(getApplicationContext(), CocornaActivity.class);
+            startActivity(intent);
         } else if (id == R.id.home_item_places) {
             Intent intent = new Intent(getApplicationContext(), SitesActivity.class);
             startActivity(intent);
@@ -175,7 +176,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             startActivity(intent);
 
         }else if (id == R.id.home_item_community) {
-            Toast.makeText(this, "Dímelo papi!", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(getApplicationContext(), CocornagramActivity.class);
+            startActivity(intent);
 
         }else if (id == R.id.home_item_calendar) {
             Toast.makeText(this, "Dímelo papi!", Toast.LENGTH_SHORT).show();

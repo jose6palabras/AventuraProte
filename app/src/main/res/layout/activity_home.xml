@@ -20,10 +20,15 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fitsSystemWindows="true"
-            android:background="@drawable/cocornamelcocho"
             app:contentScrim="?attr/colorPrimary"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:toolbarId="@+id/toolbar">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/cocornamelcocho"
+                android:contentDescription="@string/melcocho"
+                android:onClick="cocornalink"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

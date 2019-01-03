@@ -20,17 +20,47 @@
             android:name=".View.Home.HomeActivity"
             android:label="@string/title_activity_home"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".View.Sites.SitesActivity" />
-        <activity android:name=".View.Sites.ContainerActivity" />
-        <activity android:name=".View.Food.FoodActivity" />
-        <activity android:name=".View.Food.ContainerActivity" />
-        <activity android:name=".View.Adventure.AdventureActivity" />
-        <activity android:name=".View.Adventure.ContainerActivity" />
-        <activity android:name=".View.Hotel.HotelActivity" />
-        <activity android:name=".View.Hotel.ContainerActivity" />
-        <activity android:name=".View.Night.NightActivity" />
-        <activity android:name=".View.Night.ContainerActivity" />
-        <activity android:name=".View.DulceAventura.DulceAventuraActivity"></activity>
+        <activity
+            android:name=".View.Sites.SitesActivity"
+            android:parentActivityName=".View.Home.HomeActivity" />
+        <activity
+            android:name=".View.Sites.ContainerActivity"
+            android:parentActivityName=".View.Sites.SitesActivity" />
+        <activity
+            android:name=".View.Food.FoodActivity"
+            android:parentActivityName=".View.Home.HomeActivity" />
+        <activity
+            android:name=".View.Food.ContainerActivity"
+            android:parentActivityName=".View.Food.FoodActivity" />
+        <activity
+            android:name=".View.Adventure.AdventureActivity"
+            android:parentActivityName=".View.Home.HomeActivity" />
+        <activity
+            android:name=".View.Adventure.ContainerActivity"
+            android:parentActivityName=".View.Adventure.AdventureActivity" />
+        <activity
+            android:name=".View.Hotel.HotelActivity"
+            android:parentActivityName=".View.Home.HomeActivity" />
+        <activity
+            android:name=".View.Hotel.ContainerActivity"
+            android:parentActivityName=".View.Hotel.HotelActivity" />
+        <activity
+            android:name=".View.Night.NightActivity"
+            android:parentActivityName=".View.Home.HomeActivity" />
+        <activity
+            android:name=".View.Night.ContainerActivity"
+            android:parentActivityName=".View.Night.NightActivity" />
+        <activity
+            android:name=".View.DulceAventura.DulceAventuraActivity"
+            android:parentActivityName=".View.Home.HomeActivity" />
+        <activity
+            android:name=".View.Cocorna.CocornaActivity"
+            android:parentActivityName=".View.Home.HomeActivity" />
+        <activity
+            android:name=".View.Cocorna.ContainerActivity"
+            android:parentActivityName=".View.Cocorna.CocornaActivity" />
+        <activity android:name=".View.CocornaGram.CocornagramActivity"
+            android:parentActivityName=".View.Home.HomeActivity"/>
     </application>
 
 </manifest>

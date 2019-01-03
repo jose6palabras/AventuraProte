@@ -1,10 +1,12 @@
 package com.grupodetec.aventuraprote.View.Adventure;
 
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import com.grupodetec.aventuraprote.Pojo.DataSource;
@@ -18,6 +20,13 @@ public class AdventureActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adventure);
+
+        //set toolbar conf
+        Toolbar toolbar = (Toolbar) findViewById(R.id.adventure_toolbar);
+        setSupportActionBar(toolbar);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setDisplayShowTitleEnabled(false);
 
         //set recyclerview
         final RecyclerView recyclerView = findViewById(R.id.adventure_recyclerview);
@@ -39,7 +48,7 @@ public class AdventureActivity extends AppCompatActivity {
         recyclerViewAdapter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), com.grupodetec.aventuraprote.View.Sites.ContainerActivity.class);
+                Intent intent = new Intent(getApplicationContext(), com.grupodetec.aventuraprote.View.Adventure.ContainerActivity.class);
                 intent.putExtra("image", dataSource.adventureData().get(recyclerView.getChildAdapterPosition(v)).photo_id);
                 intent.putExtra("name", dataSource.adventureData().get(recyclerView.getChildAdapterPosition(v)).name);
                 intent.putExtra("local", dataSource.adventureData().get(recyclerView.getChildAdapterPosition(v)).local);

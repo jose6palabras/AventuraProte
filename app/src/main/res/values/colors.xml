@@ -4,4 +4,5 @@
     <color name="colorPrimaryDark">#003DCD</color>
     <color name="colorAccent">#7B93FF</color>
     <color name="transparent_alpha">#99000000</color>
+    <color name="transparent_appbar">#99000000</color>
 </resources>

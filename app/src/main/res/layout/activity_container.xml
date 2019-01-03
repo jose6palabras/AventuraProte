@@ -5,6 +5,11 @@
     android:layout_height="match_parent"
     android:weightSum="100"
     android:orientation="vertical">
+    <include
+        layout="@layout/color_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sites_c_toolbar"/>
     <ImageView
         android:id="@+id/container_image"
         android:layout_width="match_parent"
